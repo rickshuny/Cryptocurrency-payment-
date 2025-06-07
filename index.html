@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Trading Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e1e2f, #2a2a4a);
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            background: linear-gradient(to right, #00ff99, #00ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #cccccc;
+            margin-top: 5px;
+        }
+
+        nav {
+            background: #162447;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #00ff99;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in;
+        }
+
+        .hero h2 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #00ff99;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            color: #cccccc;
+            margin-bottom: 30px;
+        }
+
+        .payment-button {
+            background: linear-gradient(45deg, #00ff99, #00ccff);
+            color: #1a1a2e;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: pulse 2s infinite;
+        }
+
+        .payment-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 153, 0.5);
+        }
+
+        .market-info {
+            margin-top: 50px;
+        }
+
+        .market-info h3 {
+            text-align: center;
+            font-size: 2em;
+            color: #00ccff;
+            margin-bottom: 20px;
+        }
+
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .market-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .market-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 255, 153, 0.3);
+        }
+
+        .market-card h4 {
+            font-size: 1.5em;
+            color: #00ff99;
+            margin-bottom: 10px;
+        }
+
+        .market-card p {
+            font-size: 1.1em;
+            color: #cccccc;
+        }
+
+        footer {
+            background: #1a1a2e;
+            color: #cccccc;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2em; }
+            .hero h2 { font-size: 2.2em; }
+            .hero p { font-size: 1.1em; }
+            nav { flex-direction: column; align-items: center; }
+            nav a { margin: 5px 0; }
+            .payment-button { padding: 12px 30px; font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Crypto Trading Platform</h1>
+        <p>Your Gateway to Cryptocurrency Trading</p>
+    </header>
+    <nav>
+        <a href="#home">safe payment</a>
+        <a href="#markets">stable Markets</a>
+        <a href="#trade">legit Trade</a>
+        <a href="#accOchubaddie@gmail">fast delivery</a>
+        <a href="#support">trusted forum</a>
+    </nav>
+    <div class="container">
+        <div class="hero">
+            <h2>Trade Crypto with Confidence</h2>
+            <p>Buy, sell, and trade Bitcoin, Ethereum, and more with low fees and high security.</p>
+            <button class="payment-button" id="paymentButton">Make a Payment</button>
+        </div>
+        <div class="market-info">
+            <h3>Demo Overview</h3>
+            <div class="market-grid">
+                <div class="market-card">
+                    <h4>Bitcoin (BTC)</h4>
+                    <p>Price: $59,234.56</p>
+                    <p>24h Change: -2%</p>
+                </div>
+                <div class="market-card">
+                    <h4>Ethereum (ETH)</h4>
+                    <p>Price: $2,487.12</p>
+                    <p>24h Change: +3%</p>
+                </div>
+                <div class="market-card">
+                    <h4>Ripple (XRP)</h4>
+                    <p>Price: $0.52</p>
+                    <p>24h Change: +1%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 Crypto Trading Platform. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Payment button click handler
+        document.getElementById('paymentButton').addEventListener('click', function() {
+            // REPLACE THIS LINK with your payment gateway URL
+            const paymentLink = 'https://store.pesapal.com/cryptocurrencyandexchange'; // e.g., Stripe, CoinPayments, PayPal
+            window.location.href = paymentLink;
+
+            // Optional: Show a loading message (uncomment to use)
+            // alert('Redirecting to payment gateway...');
+        });
+
+        // Simulate market data refresh (for demo purposes)
+        function refreshMarketData() {
+            const cards = document.querySelectorAll('.market-card');
+            cards.forEach(card => {
+                card.style.opacity = '0.5';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    // Could update prices via API here
+                }, 500);
+            });
+        }
+
+        // Refresh market data every 10 seconds (for demo)
+        setInterval(refMarketData, 10000);
+    </script>
+</body>
+</html>
