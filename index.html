@@ -97,7 +97,7 @@
             padding: 15px 40px;
             border: none;
             border-radius: 50px;
-            font-size: 1.2em;
+            font-size: 1.1em;
             font-weight: bold;
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -194,7 +194,9 @@
         <div class="hero">
             <h2>Trade Crypto with Confidence</h2>
             <p>Buy, sell, and trade Bitcoin, Ethereum, and more with low fees and high security.</p>
-            <button class="payment-button" id="paymentButton">Make a Payment</button>
+            <iframe width="300"" height="60"
+            id="paymentButton" class="payment-button" src="https://store.pesapal.com/embed-code?pageUrl=https://store.pesapal.com/cryptocurrencypay" frameborder="0" allowfullscreen></iframe>
+           
         </div>
         <div class="market-info">
             <h3>Demo Overview</h3>
@@ -217,35 +219,8 @@
             </div>
         </div>
     </div>
+    
     <footer>
         <p>© 2025 Crypto Trading Platform. All rights reserved.</p>
     </footer>
 
-    <script>
-        // Payment button click handler
-        document.getElementById('paymentButton').addEventListener('click', function() {
-            // REPLACE THIS LINK with your payment gateway URL
-            const paymentLink = 'https://store.pesapal.com/cryptocurrencyandexchange'; // e.g., Stripe, CoinPayments, PayPal
-            window.location.href = paymentLink;
-
-            // Optional: Show a loading message (uncomment to use)
-            // alert('Redirecting to payment gateway...');
-        });
-
-        // Simulate market data refresh (for demo purposes)
-        function refreshMarketData() {
-            const cards = document.querySelectorAll('.market-card');
-            cards.forEach(card => {
-                card.style.opacity = '0.5';
-                setTimeout(() => {
-                    card.style.opacity = '1';
-                    // Could update prices via API here
-                }, 500);
-            });
-        }
-
-        // Refresh market data every 10 seconds (for demo)
-        setInterval(refMarketData, 10000);
-    </script>
-</body>
-</html>
